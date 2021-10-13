@@ -2,8 +2,8 @@ window.onload = function()
 {
     const BASE_URL = 'https://pokeapi.co/api/v2/pokemon/';
 
-    search_input = getElement('.search_input');
-    search_button = getElement('.seach_button');
+    search_input = getElement('.search-input');
+    search_button = getElement('.search-button');
     content = getElement('.pokemon');
     error_message = getElement('.error');
 
@@ -45,7 +45,7 @@ window.onload = function()
         <div class="pokemon_info">
         <h1 class="name">Nome: ${pokemon.name}</h1>
         <h2 class="number">Número: ${pokemon.id}</h2>
-        <h3 class="type">Tipo: ${pokemon.types.map(item => ' ' + item.types.name).toString()}</h3>
+        <h3 class="type">Tipo: ${pokemon.types.map(item => ' ' + item.type.name).toString()}</h3>
         <h3 class="weight">Peso: ${pokemon.weight / 100} kg</h3>
         <h3 class="height">Altura: ${pokemon.height / 100}</h3>
         </div>
